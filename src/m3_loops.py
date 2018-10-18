@@ -6,7 +6,7 @@ This problem provides practice at:
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
          their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -134,6 +134,19 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ####################################################################
+    expected15 = [0]
+    test15 = practice_problem3(0, 1, .99)
+    print()
+    print('Test 15:')
+    print('  Expected:', expected15)
+    print('  Actual:  ', test15)
+
+    test16 = practice_problem3(0, 2, .99)
+    expected16 = [0, 1]
+    print()
+    print('Test 16:')
+    print('  Expected:', expected16)
+    print('  Actual:  ', test16)
 
 
 def practice_problem3(start, n, threshold):
@@ -208,7 +221,7 @@ def practice_problem3(start, n, threshold):
       :type threshold: float
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ####################################################################
@@ -216,6 +229,18 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
+    li = []
+    i = start
+    c = 0
+    while True:
+        if c == n:
+            break
+        if math.cos(i) + math.sin(i) > threshold:
+            li.append(i)
+            c = c + 1
+        i = i + 1
+
+    return li
 
 
 # ----------------------------------------------------------------------
